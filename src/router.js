@@ -28,6 +28,16 @@ export default new Router({
           component: () => import('./views/coupon/couponHistory.vue'),
         }
       ]
+    },
+    {
+      path: '/activity',
+      component: () => import('./views/activity/index.vue'),
+      children: [
+        {
+          path: '/',
+          component: () => import('./views/activity/activity.vue'),
+        },
+      ]
     }
   ]
 })
